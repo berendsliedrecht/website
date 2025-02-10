@@ -1,10 +1,13 @@
-import { BrowserRouter, Routes as RRRoutes, Route } from 'react-router'
-import { Home } from './Home'
+import { HashRouter, Routes as ReactRoutes, Route } from 'react-router'
+
+import { About } from './pages/About'
+import { Home } from './pages/Home'
 
 export const Routes = () => (
-  <BrowserRouter>
-    <RRRoutes>
+  <HashRouter>
+    <ReactRoutes>
       <Route path="/" element={<Home />} />
-    </RRRoutes>
-  </BrowserRouter>
+      <Route path="/about" element={<About />} />
+    </ReactRoutes>
+  </HashRouter>
 )
