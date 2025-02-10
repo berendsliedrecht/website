@@ -1,10 +1,13 @@
-import { BrowserRouter, Routes as RRRoutes, Route } from 'react-router'
-import { Home } from './Home'
+import { BrowserRouter, Routes as ReactRoutes, Route } from 'react-router'
+
+import { About } from './pages/About'
+import { Home } from './pages/Home'
 
 export const Routes = () => (
   <BrowserRouter>
-    <RRRoutes>
+    <ReactRoutes>
       <Route path="/" element={<Home />} />
-    </RRRoutes>
+      <Route path="/about" element={<About />} />
+    </ReactRoutes>
   </BrowserRouter>
 )
